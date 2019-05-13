@@ -1,0 +1,59 @@
+{
+    "users":
+    {
+        "register":
+        {
+            "success":
+            {
+              "": "Your account has been created!"
+            },
+            "failure":
+            {
+              "username_taken": "That username is taken. Please choose a different one.",
+              "email_taken": "That email is taken. Please choose a different one.",
+              "password_match": "Field must be equal to password",
+              "password_invalid": "",
+              "username_empty": "Please fill out this field",
+              "email_empty": "Please fill out this field",
+              "password_empty": "Please fill out this field",
+              "confirm_password_empty": "Please fill out this field"
+            }
+        },
+        "login":
+        {
+            "success":
+            {
+              "": "You have been logged in!"
+            },
+            "failure":
+            {
+              "": "Login Unsuccessful. Please check email and password"
+            }
+        },
+        "update":
+        {
+            "success":
+            {
+              "": "Your account has been updated!"
+            },
+            "failure":
+            {
+              "username_taken": "That username is taken. Please choose a different one.",
+              "email_taken": "That email is taken. Please choose a different one."
+            }
+        },
+        "reset":
+        {
+            "success":
+            {
+              "email_sent": "An email has been sent with instructions to reset your password.",
+              "password_updated": "Your password has been updated! You are now able to log in"
+            },
+            "failure":
+            {
+              "invalid_email": "There is no account with that email. You must register first.",
+              "expired_token": "That is an invalid or expired token"
+            }
+        }
+    }
+}

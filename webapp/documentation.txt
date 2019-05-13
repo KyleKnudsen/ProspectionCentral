@@ -1,0 +1,8 @@
+______Recreate Database______
+from webapp import db
+from webapp import create_app
+app=create_app()
+with app.app_context():
+    db.init_app(app)
+    db.drop_all()
+    db.create_all()

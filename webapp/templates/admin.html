@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Admin Page</h1>
+    {% for user in users %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + user.image_file) }}">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2">Username: {{ user.username }}</a>
+                </div>
+                <div class="article-metadata">
+                    <a class="mr-2">Email: {{ user.email }}</a>
+                </div>
+                <div class="article-metadata">
+                    <a class="mr-2">Role: {{ user.role }}</a>
+                </div>
+            </div>
+            <div>
+                <a class="btn btn-navbar" href="{{ url_for('users.admin_modify', username=user.username) }}" type="button" value="Edit User"> Edit User </a>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
